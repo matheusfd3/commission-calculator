@@ -117,8 +117,13 @@ ion-icon[name="chevron-up-outline"] {
   display: none;
 }
 
-.option:has(input:checked), 
+/* .option:has(input:checked), 
 .option:hover {
+  border-bottom: 1px solid #252529;
+  background-color: #252529;
+} */
+
+.option:has(input:checked) {
   border-bottom: 1px solid #252529;
   background-color: #252529;
 }
