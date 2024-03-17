@@ -14,40 +14,50 @@ section.workers-container header form {
   gap: 0.75rem;
 }
 
-section.workers-container header form input {
-  padding: 0.8125rem 1.5rem;
-  background-color: #24243D;
-  color: #E1E1E6;
+section.workers-container header form input#worker-name {
+  background-color: #17171A;
+  border: 2px solid #252529;
   border-radius: 6px;
-  border: 0;
+  color: #FBF9FE;
+  font-size: 1rem;
   width: 100%;
-  font-size: 0.875rem;
+  padding: 0.75rem;
 }
 
-section.workers-container header form input:focus {
+section.workers-container header form input#worker-name:focus {
   outline: 2px solid #A881E6;
 }
 
-section.workers-container header form input::placeholder {
-  color: #E1E1E6;
+section.workers-container header form input#worker-name::placeholder {
+  color: #AFABB6;
 }
 
-section.workers-container header form button {
-  padding: 0.8125rem 1.5rem;
+section.workers-container header form button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  background-color: #7450AC;
   border: 0;
-  border-radius: 6px;
+  align-self: flex-end;
+  margin-bottom: 0.1rem;
   cursor: pointer;
-  color: #E1E1E6;
-  background-color: #24243D;
-  font-weight: 600;
-  font-size: 0.875rem;
+}
+
+section.workers-container header form button[type="submit"] ion-icon {
+  color: #FBF9FE;
+  font-size: 1.5rem;
 }
 
 section.workers-container ul.workers-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background-color: #1a1924;
+  background-color: #17171A;
   padding: 1.5rem;
   list-style-type: none;
   max-height: 15rem;
@@ -58,7 +68,7 @@ section.workers-container ul.workers-list::-webkit-scrollbar {
 }
 
 section.workers-container ul.workers-list::-webkit-scrollbar-thumb {
-  background-color: #282843;
+  background-color: #252529;
   border-radius: 999px;
 }
 
@@ -95,7 +105,7 @@ section.workers-container ul.workers-list li.worker div.worker-infos span.worker
   min-width: 2.5rem;
   max-width: 2.5rem;
   border-radius: 50%;
-  background-color: #282843;
+  background-color: #252529;
 }
 
 section.workers-container ul.workers-list li.worker div.worker-infos span.worker-pic ion-icon {

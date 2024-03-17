@@ -17,8 +17,8 @@
     <header>
       <h2>Funcionários</h2>
       <form action="javascript:void(0)" onSubmit="sendWorkerForm()">
-        <input required type="text" name="worker" id="worker-name" autocomplete="off" autocapitalize="none" placeholder="Nome do Funcionário">
-        <button type="submit">Adicionar</button>
+        <input required type="text" name="worker" id="worker-name" autocomplete="off" placeholder="Nome do Funcionário">
+        <button type="submit"><ion-icon name="add-outline"></ion-icon></button>
       </form>
     </header>
     <ul class="workers-list">
@@ -45,7 +45,7 @@
             <label for="money">Valor</label>
             <div class="flex">
               <span id="money-prefix">R$</span>
-              <input type="number" autocomplete="off" autocapitalize="none" step="0.01" id="money" name="money" required>
+              <input type="number" autocomplete="off" step="0.01" id="money" name="money" required>
             </div>
           </div>
           <div class="select">

@@ -31,9 +31,7 @@ section.commissions-container header form select#day-of-week {
   margin-bottom: 0.75rem;
   padding: 0.75rem;
   font-size: 1rem;
-
-  text-size-adjust: 100%; /* Evita o ajuste de tamanho de texto */
-  -webkit-text-size-adjust: 100%; /* Para compatibilidade com navegadores baseados no WebKit (como o Safari do iOS) */
+  height: 100%;
 }
 
 section.commissions-container header form select#day-of-week:focus {
@@ -66,7 +64,7 @@ section.commissions-container header form span#money-prefix {
 }
 
 section.commissions-container header form input#money {
-  background-color: #111112;
+  background-color: #17171A;
   border: 2px solid #252529;
   border-radius: 0 6px 6px 0;
   color: #FBF9FE;
@@ -74,9 +72,6 @@ section.commissions-container header form input#money {
   width: 4.125rem;
   padding: 0.75rem 0;
   text-align: center;
-
-  text-size-adjust: 100%; /* Evita o ajuste de tamanho de texto */
-  -webkit-text-size-adjust: 100%; /* Para compatibilidade com navegadores baseados no WebKit (como o Safari do iOS) */
 }
 
 section.commissions-container header form input#money:focus {
@@ -88,10 +83,10 @@ section.commissions-container header form button[type="submit"] {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   background-color: #7450AC;
   border: 0;
   align-self: flex-end;
