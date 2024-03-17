@@ -29,7 +29,7 @@ section.commissions-container header form select#day-of-week {
   border-radius: 6px;
   color: #AFABB6;
   margin-bottom: 0.75rem;
-  padding: 0.75rem !important;
+  padding: 0.75rem;
   font-size: 1rem;
 }
 
@@ -200,7 +200,7 @@ section.commissions-container div.commissions-result ul.commissions-values li.co
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #252529;
+  border-bottom: 2px solid #252529;
 }
 
 section.commissions-container div.commissions-result ul.commissions-values li.commissions-item span {
