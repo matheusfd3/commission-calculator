@@ -98,8 +98,6 @@ function calculateResult() {
     })
   });
 
-  
-
   var commissionsLi = '';
   for (var i = 0; i < workersCommissions.length; i++) {
     if (workersCommissions[i].commission > 0) {
