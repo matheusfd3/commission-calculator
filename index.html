@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/workers.css">
+  <link rel="stylesheet" href="./styles/commissions.css">
+  <link rel="stylesheet" href="./styles/multi-select.css">
+  <title>Calculadora de Comissões</title>
+</head>
+<body onload="loadWorkersFromLocalStorage();loadWorkersMultiSelect()">
+  <section class="workers-container">
+    <header>
+      <h2>Funcionários</h2>
+      <form action="javascript:void(0)" onSubmit="sendWorkerForm()">
+        <input required type="text" name="worker" id="worker-name" placeholder="Nome do Funcionário">
+        <button type="submit">Adicionar</button>
+      </form>
+    </header>
+    <ul class="workers-list">
+      <img class="loading-gif" src="./images/loading.gif" alt="Gif">
+    </ul>
+  </section>
+  <section class="commissions-container">
+    <header>
+      <h2>Comissões</h2>
+      <form action="javascript:void(0)" onSubmit="sendCommissionForm()">
+        <label for="day-of-week">Semana</label>
+        <select name="dayOfWeek" id="day-of-week" required>
+          <option value="">Selecione</option>
+          <option value="Domingo">Domingo</option>
+          <option value="Segunda-feira">Segunda-feira</option>
+          <option value="Terça-feira">Terça-feira</option>
+          <option value="Quarta-feira">Quarta-feira</option>
+          <option value="Quinta-feira">Quinta-feira</option>
+          <option value="Sexta-feira">Sexta-feira</option>
+          <option value="Sábado">Sábado</option>
+        </select>
+        <div class="commissions-inputs-wrapper">
+          <div>
+            <label for="money">Valor</label>
+            <div class="flex">
+              <span id="money-prefix">R$</span>
+              <input type="number" step="0.01" id="money" name="money" required>
+            </div>
+          </div>
+          <div class="select">
+            <div id="worked-select">
+              <label for="options-view-button">Quem trabalhou?</label>
+              <input type="checkbox" id="options-view-button">
+              <div id="select-button">
+                <div id="selected-value">Sem funcionário</div>
+                <div id="chevrons">
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <ul id="options"></ul>
+          </div>
+          <button type="submit"><ion-icon name="add-outline"></ion-icon></button>
+        </div>
+      </form>
+    </header>
+    <ul class="commissions-list"></ul>
+    <div class="commissions-result"></div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./javascript/multi-select.js"></script>
+  <script src="./javascript/workers.js"></script>
+  <script src="./javascript/commissions.js"></script>
+</body>
+</html>

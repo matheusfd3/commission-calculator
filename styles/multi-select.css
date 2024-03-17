@@ -1,0 +1,155 @@
+.select {
+  /* padding: 6rem; */
+  flex: 1;
+  position: relative;
+}
+
+#worked-select {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #worked-select label {
+  font-size: 0.75rem;
+  letter-spacing: 0.0225rem;
+} */
+
+#select-button {
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 2px solid #252529;
+  background-color: #17171A;
+}
+
+#selected-value {
+  color: #AFABB6;
+  font-size: 1rem;
+}
+
+#chevrons {
+  color: #AFABB6;
+}
+
+#chevrons ion-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+#chevrons ion-icon[name="chevron-up-outline"] {
+  display: none;
+}
+
+#options-view-button:focus + #select-button, 
+#options-view-button:checked + #select-button {
+  outline: 2px solid #A881E6;
+}
+
+/* #worked-select:has(#options-view-button:checked) label,
+#options-view-button:checked + #select-button #chevrons {
+  color: #A881E6;
+} */
+
+
+#options-view-button:checked + #select-button #chevrons
+ion-icon[name="chevron-down-outline"] {
+  display: none;
+}
+
+#options-view-button:checked + #select-button #chevrons
+ion-icon[name="chevron-up-outline"] {
+  display: block;
+}
+
+#worked-select {
+  position: relative;
+}
+
+#options-view-button {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+#options {
+  list-style-type: none;
+  margin-top: .25rem;
+  border-radius: 6px;
+  border: 2px solid #252529;
+  background-color: #17171A;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  display: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  padding: .75rem;
+  border-bottom: 1px solid #252529;
+
+  position: relative;
+}
+
+.option .label {
+  color: #E1E1E6;
+}
+
+.option ion-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.option ion-icon:last-child {
+  margin-left: auto;
+  color: #A881E6;
+  display: none;
+}
+
+.option:has(input:checked), 
+.option:hover {
+  border-bottom: 1px solid #252529;
+  background-color: #252529;
+}
+
+
+.option:has(input:focus) {
+  outline: 2px solid #A881E6;
+  outline-offset: -0.25rem;
+}
+
+.option:has(input:checked) ion-icon[name="checkmark-outline"] {
+  display: block;
+}
+
+.option input[type="checkbox"] {
+  all: unset;
+
+  position: absolute;
+  inset: 0;
+
+  cursor: pointer;
+}
+
+#worked-select:has(#options-view-button:checked) + #options {
+  display: block;
+}
+
+/* .select:has(.option input:checked) #worked-select label {
+  color: #A881E6;
+} */
+
+/* .select:has(.option input:checked) #selected-value {
+  color: #FBF9FE;
+} */
