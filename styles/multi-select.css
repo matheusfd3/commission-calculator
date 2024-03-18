@@ -117,6 +117,15 @@ ion-icon[name="chevron-up-outline"] {
   display: none;
 }
 
+.option.elaine .label {
+  font-weight: 700;
+  color: #FFC0CB;
+}
+
+.option.elaine ion-icon {
+  color: #FFC0CB;
+}
+
 /* .option:has(input:checked), 
 .option:hover {
   border-bottom: 1px solid #252529;
@@ -132,6 +141,10 @@ ion-icon[name="chevron-up-outline"] {
 .option:has(input:focus) {
   outline: 2px solid #A881E6;
   outline-offset: -0.25rem;
+}
+
+.option.elaine:has(input:focus) {
+  outline: 2px solid #FFC0CB;
 }
 
 .option:has(input:checked) ion-icon[name="checkmark-outline"] {

@@ -119,6 +119,14 @@ section.workers-container ul.workers-list li.worker div.worker-infos span.worker
   font-size: 1.1875rem;
 }
 
+section.workers-container ul.workers-list li.worker div.worker-infos span.worker-pic.elaine {
+  background-color: #FFC0CB;
+}
+
+section.workers-container ul.workers-list li.worker div.worker-infos span.worker-pic.elaine ion-icon {
+  color: #936168;
+}
+
 section.workers-container ul.workers-list li.worker ul.worker-actions {
   display: flex;
   gap: 1rem;

@@ -10,7 +10,7 @@ function loadCommissionsOnScreen() {
       var workedLi = '';
 
       for (var j = 0; j < commission.worked.length; j++) {
-        workedLi += `<li class="worked-item">${commission.worked[j]}</li>`
+        workedLi += `<li class="worked-item ${commission.worked[j] == "Elaine" ? "elaine" : ""}">${commission.worked[j]}</li>`
       }
 
       commissionsList.innerHTML += `
@@ -104,6 +104,7 @@ function calculateResult() {
       commissionsLi += `
         <li class="commissions-item">
           <span>${workersCommissions[i].name}</span>
+          ${workersCommissions[i].name == "Elaine" ? "<span>Te amo ❤️</span>" : ""}
           <span>R$ ${String(parseFloat(parseInt(workersCommissions[i].commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
         </li>
       `;

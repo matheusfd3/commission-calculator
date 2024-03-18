@@ -5,7 +5,7 @@ function loadWorkersMultiSelect() {
   for (let i = 0; i < workers.length; i++) {
     var worker = workers[i];
     multiSelect.innerHTML += `
-      <li class="option">
+      <li class="option ${worker == "Elaine" ? "elaine" : ""}">
         <input 
           type="checkbox"
           name="worked"
@@ -14,7 +14,7 @@ function loadWorkersMultiSelect() {
           onclick="updateMultiSelectValue()"
           checked
         >
-        <ion-icon name="person-circle-outline"></ion-icon>
+        ${worker == "Elaine" ? "<ion-icon name='heart-circle-outline'></ion-icon>" : "<ion-icon name='person-circle-outline'></ion-icon>"}
         <span class="label">${worker}</span>
         <ion-icon name="checkmark-outline"></ion-icon>
       </li>

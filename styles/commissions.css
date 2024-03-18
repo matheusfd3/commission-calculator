@@ -158,6 +158,11 @@ section.commissions-container ul.commissions-list li.commission-item ul.worked-l
   font-size: 0.75rem;
 }
 
+section.commissions-container ul.commissions-list li.commission-item ul.worked-list li.worked-item.elaine {
+  background-color: #FFC0CB;
+  color: #936168;
+}
+
 section.commissions-container ul.commissions-list li.commission-item button {
   border: 0;
   background-color: transparent;

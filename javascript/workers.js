@@ -28,8 +28,8 @@ function loadWorkersOnScreen() {
       workersList.innerHTML += `
         <li class="worker">
           <div class="worker-infos">
-            <span class="worker-pic">
-              <ion-icon name="person-outline"></ion-icon>
+            <span class="worker-pic ${worker == "Elaine" ? "elaine" : ""}">
+              ${worker == "Elaine" ? "<ion-icon name='heart-outline'></ion-icon>" : "<ion-icon name='person-outline'></ion-icon>"}
             </span>
             <span class="worker-name">${worker}</span>
           </div>
