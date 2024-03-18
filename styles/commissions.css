@@ -178,7 +178,8 @@ section.commissions-container div.commissions-result {
   flex-direction: column;
   margin: 1.5rem;
   margin-top: 0;
-  padding: 0.5rem;
+  padding: 1.5rem;
+  padding-top: 0.5rem;
   background-color: #17171A;
   border: 2px solid #7450AC;
   border-radius: 6px;
