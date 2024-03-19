@@ -1,4 +1,5 @@
 var commissions = [];
+var workersCommissions = [];
 
 function loadCommissionsOnScreen() {
   var commissionsList = document.querySelector('.commissions-list');
@@ -10,7 +11,7 @@ function loadCommissionsOnScreen() {
       var workedLi = '';
 
       for (var j = 0; j < commission.worked.length; j++) {
-        workedLi += `<li class="worked-item ${commission.worked[j] == "Elaine" ? "elaine" : ""}">${commission.worked[j]}</li>`
+        workedLi += `<li class="worked-item">${commission.worked[j]}</li>`
       }
 
       commissionsList.innerHTML += `
@@ -80,9 +81,10 @@ function calculateResult() {
 
   var total = 0;
   
-  var workersCommissions = workers.map(worker => {
+  workersCommissions = workers.map(worker => {
     return {
       name: worker,
+      commissionPerWeekday: [],
       commission: 0
     }
   });
@@ -93,6 +95,10 @@ function calculateResult() {
     var commissionPerWorker = money / commission.worked.length;
     workersCommissions.forEach(workerCommission => {
       if (commission.worked.includes(workerCommission.name)) {
+        workerCommission.commissionPerWeekday.push({
+          name: commission.dayOfWeek,
+          commission: commissionPerWorker
+        })
         workerCommission.commission += commissionPerWorker;
       }
     })
@@ -104,8 +110,10 @@ function calculateResult() {
       commissionsLi += `
         <li class="commissions-item">
           <span>${workersCommissions[i].name}</span>
-          ${workersCommissions[i].name == "Elaine" ? "<span>Te amo ❤️</span>" : ""}
-          <span>R$ ${String(parseFloat(parseInt(workersCommissions[i].commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
+          <button onclick="openReportModal(${i})">
+            <span>R$ ${String(parseFloat(parseInt(workersCommissions[i].commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
+            <ion-icon name="information-circle-outline"></ion-icon>
+          </button>
         </li>
       `;
     }

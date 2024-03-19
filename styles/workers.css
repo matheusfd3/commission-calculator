@@ -63,14 +63,15 @@ section.workers-container ul.workers-list {
   max-height: 15rem;
   overflow-y: auto;
 }
-section.workers-container ul.workers-list::-webkit-scrollbar {
+
+/* section.workers-container ul.workers-list::-webkit-scrollbar {
   width: 0.5rem;
 }
 
 section.workers-container ul.workers-list::-webkit-scrollbar-thumb {
   background-color: #252529;
   border-radius: 999px;
-}
+} */
 
 section.workers-container ul.workers-list img.loading-gif {
   width: 2.5rem;
@@ -115,7 +116,7 @@ section.workers-container ul.workers-list li.worker div.worker-infos span.worker
 
 section.workers-container ul.workers-list li.worker div.worker-infos span.worker-name {
   color: #E1E1E6;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.1875rem;
 }
 
@@ -136,6 +137,7 @@ section.workers-container ul.workers-list li.worker ul.worker-actions {
 section.workers-container ul.workers-list li.worker ul.worker-actions li.worker-action button {
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 section.workers-container ul.workers-list li.worker ul.worker-actions li.worker-action button ion-icon {

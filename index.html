@@ -3,13 +3,14 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/workers.css">
   <link rel="stylesheet" href="./styles/commissions.css">
   <link rel="stylesheet" href="./styles/multi-select.css">
+  <link rel="stylesheet" href="./styles/report-modal.css">
   <title>Calculadora de Comissões</title>
 </head>
 <body onload="loadWorkersFromLocalStorage();loadWorkersMultiSelect()">
@@ -69,8 +70,32 @@
     <ul class="commissions-list"></ul>
     <div class="commissions-result"></div>
   </section>
+  <section id="report-modal-container">
+    <main>
+      <header>
+        <a id="report-modal-share-on-whatsapp" href="https://api.whatsapp.com/send?text=Relatório%20de%20Matheus%0A">
+          <ion-icon name="share-outline"></ion-icon>
+        </a>
+        <h3 id="report-modal-title"></h3>
+        <button onclick="closeReportModal()">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </header>
+      <ul id="report-list">
+        <li class="report-item">
+          <span>Domingo</span>
+          <span>R$ 48,2345</span>
+        </li>
+        <li class="report-item">
+          <span>Domingo</span>
+          <span>R$ 48,2345</span>
+        </li>
+      </ul>
+    </main>
+  </section>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./javascript/report-modal.js"></script>
   <script src="./javascript/multi-select.js"></script>
   <script src="./javascript/workers.js"></script>
   <script src="./javascript/commissions.js"></script>

@@ -158,14 +158,15 @@ section.commissions-container ul.commissions-list li.commission-item ul.worked-l
   font-size: 0.75rem;
 }
 
-section.commissions-container ul.commissions-list li.commission-item ul.worked-list li.worked-item.elaine {
+/* section.commissions-container ul.commissions-list li.commission-item ul.worked-list li.worked-item.elaine {
   background-color: #FFC0CB;
   color: #936168;
-}
+} */
 
 section.commissions-container ul.commissions-list li.commission-item button {
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 section.commissions-container ul.commissions-list li.commission-item button ion-icon {
@@ -212,6 +213,21 @@ section.commissions-container div.commissions-result ul.commissions-values li.co
 
 section.commissions-container div.commissions-result ul.commissions-values li.commissions-item span {
   color: #E1E1E6;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+section.commissions-container div.commissions-result ul.commissions-values li.commissions-item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+section.commissions-container div.commissions-result ul.commissions-values li.commissions-item button ion-icon {
+  color: #E1E1E6;
   font-size: 1rem;
 }
