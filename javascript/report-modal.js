@@ -14,23 +14,23 @@ function openReportModal(workerCommissionIndex) {
   var linkWhatsApp = `whatsapp://send?text=*Comissão%20de%20${workerCommission.name}*%0A`;
   var commissionPerWeekDayLi = '';
   workerCommission.commissionPerWeekday.forEach(weekday => {
-    linkWhatsApp += `${weekday.name}%20você%20ganhou%20R$%20${String(parseFloat(parseInt(weekday.commission * 100) / 100).toFixed(2)).replace('.', ',')}%0A`
+    linkWhatsApp += `${weekday.name}%20->%20R$${String(parseFloat(parseInt(weekday.commission * 100) / 100).toFixed(2)).replace('.', ',')}%0A`
     commissionPerWeekDayLi += `
       <li class="report-item">
         <span>${weekday.name}</span>
-        <span>R$ ${String(parseFloat(parseInt(weekday.commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
+        <span><span>R$</span>${String(parseFloat(parseInt(weekday.commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
       </li>
     `;
   });
 
-  linkWhatsApp += `Total%20R$%20${String(parseFloat(parseInt(workerCommission.commission * 100) / 100).toFixed(2)).replace('.', ',')}`;
+  linkWhatsApp += `Total%20->%20R$${String(parseFloat(parseInt(workerCommission.commission * 100) / 100).toFixed(2)).replace('.', ',')}`;
   reportModalWhatsAppLink.href = linkWhatsApp;
 
   reportModalContent.innerHTML = `
     ${commissionPerWeekDayLi}
     <li class="report-item">
       <span>Total</span>
-      <span>R$ ${String(parseFloat(parseInt(workerCommission.commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
+      <span><span>R$</span>${String(parseFloat(parseInt(workerCommission.commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
     </li>
   `;
 

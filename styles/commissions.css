@@ -139,6 +139,10 @@ section.commissions-container ul.commissions-list li.commission-item div.commiss
   font-size: 0.75rem;
 }
 
+section.commissions-container ul.commissions-list li.commission-item div.commission-infos span > span {
+  font-size: 0.65rem;
+}
+
 section.commissions-container ul.commissions-list li.commission-item ul.worked-list {
   padding: 0 0.5rem;
   list-style-type: none;
@@ -217,6 +221,10 @@ section.commissions-container div.commissions-result ul.commissions-values li.co
   font-size: 1rem;
 }
 
+section.commissions-container div.commissions-result ul.commissions-values li.commissions-item span > span {
+  font-size: 0.75rem;
+}
+
 section.commissions-container div.commissions-result ul.commissions-values li.commissions-item button {
   display: flex;
   align-items: center;
@@ -228,6 +236,6 @@ section.commissions-container div.commissions-result ul.commissions-values li.co
 }
 
 section.commissions-container div.commissions-result ul.commissions-values li.commissions-item button ion-icon {
-  color: #E1E1E6;
-  font-size: 1rem;
+  color: gray;
+  font-size: 0.75rem;
 }

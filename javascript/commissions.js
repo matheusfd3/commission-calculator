@@ -18,7 +18,7 @@ function loadCommissionsOnScreen() {
         <li class="commission-item">
           <div class="commission-infos">
             <h3>${commission.dayOfWeek}</h3>
-            <span>R$ ${commission.money}</span>
+            <span><span>R$</span>${commission.money}</span>
           </div>
           <ul class="worked-list">
             ${workedLi}
@@ -111,7 +111,7 @@ function calculateResult() {
         <li class="commissions-item">
           <span>${workersCommissions[i].name}</span>
           <button onclick="openReportModal(${i})">
-            <span>R$ ${String(parseFloat(parseInt(workersCommissions[i].commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
+            <span><span>R$</span>${String(parseFloat(parseInt(workersCommissions[i].commission * 100) / 100).toFixed(2)).replace('.', ',')}</span>
             <ion-icon name="information-circle-outline"></ion-icon>
           </button>
         </li>
@@ -125,7 +125,7 @@ function calculateResult() {
       ${commissionsLi}
       <li class="commissions-item">
         <span>Total</span>
-        <span>R$ ${String(total.toFixed(2)).replace('.', ',')}</span>
+        <span><span>R$</span>${String(total.toFixed(2)).replace('.', ',')}</span>
       </li>
     </ul>
   `;

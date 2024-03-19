@@ -77,3 +77,7 @@ section#report-modal-container main ul#report-list li.report-item span {
   font-weight: bold;
   font-size: 1rem;
 }
+
+section#report-modal-container main ul#report-list li.report-item span > span {
+  font-size: 0.75rem;
+}
